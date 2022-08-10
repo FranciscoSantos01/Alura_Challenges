@@ -34,7 +34,9 @@ btn.addEventListener("click", () => {
   let now = array.split("");
   console.log(now);
   let join = [];
+  text.placeholder = "Ingrese su texto aqui";
   text.value = " ";
+  
   for (let i = 0; i < now.length; i++) {
     if (
       now[i] === now[i].toUpperCase() ||

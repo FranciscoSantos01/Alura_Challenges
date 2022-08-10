@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #E5E5E5;
+}
+img{
+    padding: 10px;
+    display: inline-block;
+}
+header{
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+}
+textarea{
+    font-size: 20px;
+    display: none;
+}
+
+.section1{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 200px;
+    padding: 20px;
+   text-align: center;
+}
+.container{
+    background-color: white;
+    padding: 20px;
+    border-radius: 24px;
+}
+.container  img{
+    margin-top: 80px;
+    width: 45%;
+}
+.container button{
+margin-top: 10%;
+height: 67px;
+width: 250px;
+border-radius: 24px;
+padding: 14px;
+border-color: #0A3871;
+background-color:white ;
+color: #0A3871;
+opacity: 0;
+}
+.input{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    
+}
+ input{
+    margin-top: 10%;
+    padding: 14px;
+    width: 300px;
+    border-radius: 12px;
+    border: none;
+    background-color:#E5E5E5 ;
+    height: 40px;
+}
+
+
+.btn-container{
+    margin-top: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.btn-container span{
+    text-align: start;
+    font-size: 12px;
+    font-weight: 400;
+    
+}
+.button{
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+}
+.button button{
+height: 67px;
+width: 250px;
+border-radius: 24px;
+padding: 14px;
+margin-left: 20px;
+background-color: #0A3871;
+color: white;
+}
+.button button:hover{
+    background-color: #D8DFE8;
+    color: black;
+}
+
+.button :nth-last-child(1){
+    color: black;
+    background-color: #D8DFE8;
+}
+.button :nth-last-child(1):hover{
+    background-color: #0A3871;
+    color: white;
+}
+
+h3{
+font-family: Inter;
+font-size: 24px;
+font-weight: 700;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: center;
+}
+
+p{
+font-family: Inter;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+
+textarea{
+    border: none;
+}
+
+/* responive---------- */
+
+
+
+@media only screen and (max-width: 600px) {
+    .btn-container{
+        margin-top: 15%
+    }
+    .button{
+        display:flex;
+        flex-direction: column;
+        align-items:flex-start;
+        gap: 10px;
+    }
+    .section1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+    .container img{
+        display: none;
+    }
+    .container button{
+        margin-top: 10px;
+    }
+  }

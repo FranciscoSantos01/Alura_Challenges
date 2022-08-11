@@ -77,6 +77,11 @@ resolve.addEventListener("click", () => {
     .replace(/imes/g, "i")
     .replace(/utaf/g, "u")
     .replace(/ai/g, "a");
+    h3.style.display = 'none';
+    p.style.display = 'none';
+    doll.style.opacity = 0;
+    copia.style.display = 'block';
+    resultado.style.display = "block";
    resultado.value = desencriptado;
   }
 });

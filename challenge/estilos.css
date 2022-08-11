@@ -44,7 +44,7 @@ padding: 14px;
 border-color: #0A3871;
 background-color:white ;
 color: #0A3871;
-opacity: 0;
+display: none;
 }
 .input{
     width: 450px;

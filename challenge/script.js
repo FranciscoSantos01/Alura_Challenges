@@ -22,52 +22,37 @@ function containsSpecialChars(str) {
 
   return result;
 }
+function upperCase(str) {
+  let texto = str.split("");
+  for (let i = 0; i < texto.length; i++) {
+    if (texto[i] === texto[i].toUpperCase()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
 
 btn.addEventListener("click", () => {
-  doll.style.opacity = 0 ;
-  h3.style.opacity = 0;
-  p.style.opacity = 0;
-  copia.style.opacity = 1;
-  resultado.style.display = 'block'
   let texto = text.value;
-  let array = texto;
-  let now = array.split("");
-  console.log(now);
-  let join = [];
   text.placeholder = "Ingrese su texto aqui";
-  text.value = " ";
-  
-  for (let i = 0; i < now.length; i++) {
-    if (
-      now[i] === now[i].toUpperCase() ||
-      containsSpecialChars(now[i]) === true
-    ) {
-      if (now[i] !== " ") {
-        alert("Remeber no Uppercase and special characters");
-        break;
-      }
-      
-    }
-    if (now[i] === "e") {
-      now[i] = "enter";
-    }
-    if (now[i] === "i") {
-      now[i] = "imes";
-    }
-    if (now[i] === "a") {
-      now[i] = "ai";
-    }
-    if (now[i] === "o") {
-      now[i] = "ober";
-    }
-    if (now[i] === "u") {
-      now[i] = "ufat";
-    }
-    join.push(now[i]);
+  if (containsSpecialChars(texto) !== false || upperCase(texto) !== false) {
+    alert("Rember no Uppercase or special characters");
+  } else {
+    let final = texto
+      .replace(/e/g, "enter")
+      .replace(/o/g, "ober")
+      .replace(/i/g, "imes")
+      .replace(/u/g, "utaf")
+      .replace(/a/g, "ai");
+    h3.style.display = 'none';
+    p.style.display = 'none';
+    doll.style.opacity = 0;
+    copia.style.display = 'block';
+    resultado.style.display = "block";
+    resultado.value = final;
   }
-  let encriptado = join.join("");
-  resultado.value = encriptado;
-  join.length = 0;
+  
 });
 
 function copy() {
@@ -83,12 +68,15 @@ copia.addEventListener('click', copy);
 
 resolve.addEventListener("click", () => {
   let textiar = text.value;
+  if (containsSpecialChars(textiar) !== false || upperCase(textiar) !== false) {
+    alert("Rember no Uppercase or special characters");
+  } else{
   let desencriptado = textiar
     .replace(/enter/g, "e")
     .replace(/ober/g, "o")
     .replace(/imes/g, "i")
     .replace(/utaf/g, "u")
     .replace(/ai/g, "a");
-
    resultado.value = desencriptado;
+  }
 });
